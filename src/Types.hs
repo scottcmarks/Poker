@@ -4,9 +4,12 @@ module Types where
 import RIO
 import RIO.Process
 
+
 -- | Command line arguments
 data Options = Options
   { optionsVerbose :: !Bool
+  , optionsWallet :: !Int
+  , optionsTag :: ![Char] -- fixme: s/[Char]/Text/g
   }
 
 data App = App

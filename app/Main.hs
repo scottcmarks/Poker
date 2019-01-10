@@ -1,5 +1,7 @@
+{-# OPTIONS_GHC -fno-warn-type-defaults #-}
 {-# LANGUAGE NoImplicitPrelude #-}
 {-# LANGUAGE TemplateHaskell #-}
+{-# LANGUAGE OverloadedStrings #-}
 module Main (main) where
 
 import Import
@@ -15,10 +17,27 @@ main = do
     "Header for command line arguments"
     "Program description, also for command line arguments"
     (Options
-       <$> switch ( long "verbose"
-                 <> short 'v'
-                 <> help "Verbose output?"
-                  )
+       <$> switch
+           ( long "verbose"
+          <> short 'v'
+          <> help "Verbose output?"
+           )
+       <*> option auto
+           ( long "wallet"
+          <> short 'w'
+          <> help "Wallet amount?"
+          <> showDefault
+          <> value 1
+          <> metavar "AMT"
+           )
+       <*> strOption
+           ( long "tag"
+          <> short 't'
+          <> help "Transaction tag?"
+          <> showDefault
+          <> value "Five Oaks"
+          <> metavar "TAG"
+           )
     )
     empty
   lo <- logOptionsHandle stderr (optionsVerbose options)

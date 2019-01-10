@@ -6,4 +6,7 @@ import Import
 
 run :: RIO App ()
 run = do
-  logInfo "We're inside the application!"
+  options <- asks appOptions
+  when (optionsVerbose options) $ logInfo "verbose"
+  logInfo $ fromString ( "wallet=" ++ show ( optionsWallet options ) )
+  logInfo $ fromString ( "tag=" ++ ( optionsTag options ) )
