@@ -1,51 +1,29 @@
-{-# OPTIONS_GHC -fno-warn-type-defaults #-}
 {-# LANGUAGE NoImplicitPrelude #-}
-{-# LANGUAGE TemplateHaskell #-}
-{-# LANGUAGE OverloadedStrings #-}
-module Main (main) where
 
-import Import
-import Run
-import RIO.Process
-import Options.Applicative.Simple
-import qualified Paths_Poker
+module Main
+where
+
+import RIO
+import App
+import Options(getOptions)
+import RIO.Process(mkDefaultProcessContext)
+import Run(run)
 
 main :: IO ()
 main = do
-  (options, ()) <- simpleOptions
-    $(simpleVersion Paths_Poker.version)
-    "Header for command line arguments"
-    "Program description, also for command line arguments"
-    (Options
-       <$> switch
-           ( long "verbose"
-          <> short 'v'
-          <> help "Verbose output?"
-           )
-       <*> option auto
-           ( long "wallet"
-          <> short 'w'
-          <> help "Wallet amount?"
-          <> showDefault
-          <> value 1
-          <> metavar "AMT"
-           )
-       <*> strOption
-           ( long "tag"
-          <> short 't'
-          <> help "Transaction tag?"
-          <> showDefault
-          <> value "Five Oaks"
-          <> metavar "TAG"
-           )
-    )
-    empty
-  lo <- logOptionsHandle stderr (optionsVerbose options)
+  ( options @ AppOptions{ appOptionsVerbose    = verbose
+                        , appOptionsDbFilePath = dbFilePath
+                        }
+   ,
+    runCmd
+   ) <- getOptions
+  lo <- logOptionsHandle stderr verbose
   pc <- mkDefaultProcessContext
   withLogFunc lo $ \lf ->
-    let app = App
-          { appLogFunc = lf
-          , appProcessContext = pc
-          , appOptions = options
-          }
-     in runRIO app run
+    let app = App { appLogFunc        = lf
+                  , appProcessContext = pc
+                  , appAppOptions     = options
+                  , appVerbose        = verbose
+                  , appDbFilePath     = fromString dbFilePath
+                  }
+     in runRIO app $ run runCmd
