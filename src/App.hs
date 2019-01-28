@@ -18,6 +18,7 @@ import RIO.Process
 import RIO.Text (Text, pack, unpack)
 
 
+
 -- | Command line arguments
 data AppOptions = AppOptions
   { appOptionsVerbose    :: !Bool
@@ -42,23 +43,25 @@ instance HasDbFilePath String  where
   dbFilePathL = lens pack (const unpack)
 
 
--- | list subommand line arguments
-data ListOptions = ListOptions
-  { listOptionsRaw    :: !Bool
+-- | processing subommand (list, chunks) line arguments
+data MergeOptions = MergeOptions
+  { processOptionsRaw    :: !Bool
   }
 
-class HasListOptions env where
-  listOptionsL :: Lens' env ListOptions
-instance HasListOptions ListOptions where
-  listOptionsL = id
+class HasProcessOptions env where
+  processOptionsL :: Lens' env MergeOptions
+instance HasProcessOptions MergeOptions where
+  processOptionsL = id
 
-class HasListRaw env where
+class HasProcessRaw env where
   rawL :: Lens' env Bool
-instance HasListRaw Bool  where
+instance HasProcessRaw Bool  where
   rawL = id
 
-instance HasListRaw ListOptions where
-   rawL            = lens listOptionsRaw            (\x y -> x { listOptionsRaw            = y })
+instance HasProcessRaw MergeOptions where
+   rawL = lens processOptionsRaw (\x y -> x { processOptionsRaw = y })
+
+
 
 
 -- | application execution environment

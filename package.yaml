@@ -1,5 +1,5 @@
 name:                Poker
-version:             0.1.0.0
+version:             0.1.0.1
 github:              scottcmarks/Poker
 license:             BSD3
 author:              Scott Marks
@@ -46,7 +46,7 @@ library:
   source-dirs: src
 
 executables:
-  Poker-exe:
+  poker:
     main:                Main.hs
     source-dirs:         app
     dependencies:
@@ -59,7 +59,7 @@ executables:
     - -with-rtsopts=-N
 
 tests:
-  Poker-test:
+  poker-test:
     main:                Spec.hs
     source-dirs:         test
     dependencies:

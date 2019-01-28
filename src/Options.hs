@@ -10,80 +10,88 @@ where
 
 import           App
 import           RIO
-import           Options.Applicative.Simple( simpleOptions
-                                           , addCommand
-                                           , internal
-                                           , hidden
-                                           , help
-                                           , short
-                                           , long
-                                           , switch
-                                           , metavar
-                                           , value
-                                           , showDefault
-                                           , strOption
-                                           , simpleVersion
-                                           , CommandFields
-                                           , Mod
-                                           , Parser)
+import           Options.Applicative.Simple (
+    CommandFields
+  , Mod
+  , Parser
+  , simpleOptions
+  , addCommand
+  , help
+  , short
+  , long
+  , switch
+  , metavar
+  , value
+  , showDefault
+  , strOption
+  , simpleVersion
+  , internal
+  , hidden
+  )
 import           Control.Monad.Trans.Except(ExceptT)
 import           Control.Monad.Trans.Writer(Writer)
 import qualified Paths_Poker(version)
-import           Run(chunkRecords, countRecords, exportAsCsv, listAllRecords)
+import           Run(
+    chunks
+  , countRecords
+  , exportAsCsv
+  , list
+  )
 
 -- common options that can appear first, before commands
 appOptions :: Parser AppOptions
-appOptions =
-       ( AppOptions <$>
+appOptions = ( AppOptions <$>
 
-           switch
-           ( long "verbose"
-          <> short 'v'
-          <> help "Verbose output?"
-           )
+    switch
+    ( long "verbose"
+   <> short 'v'
+   <> help "Verbose output?"
+    )
 
-       <*>
+  <*>
 
-           strOption
-           ( long "dbFilePath"
-          <> short 'd'
-          <> help "Database file path?"
-          <> showDefault
-          <> value "Poker.db"
-          <> metavar "DB"
-           )
-       )
+    strOption
+    ( long "dbFilePath"
+   <> short 'd'
+   <> help "Database file path?"
+   <> showDefault
+   <> value "Poker.db"
+   <> metavar "DB"
+    )
 
-listOptions :: Parser ListOptions
-listOptions =
-    ( ListOptions <$>
-           switch
-           ( long "raw"
-          <> short 'r'
-          <> help "Raw (unmerged) output?"
-          <> hidden <> internal
-           )
+  )
+
+mergeOptions :: Parser MergeOptions
+mergeOptions = ( MergeOptions <$>
+
+     switch
+     ( long "raw"
+    <> short 'r'
+    <> help "raw (unmerged) output?"
+    <> hidden <> internal
      )
+
+  )
 
 
 -- Commands
 commands :: ExceptT (RIO App ()) (Writer (Mod CommandFields (RIO App ()))) ()
 commands = do addCommand "list"
                          "List all database records"
-                         listAllRecords
-                         listOptions
+                         list
+                         mergeOptions
               addCommand "export"
-                         "Export all records as .csv to stdout"
-                         (const exportAsCsv)
-                         (pure ())
+                         "Export all records in .csv format"
+                         exportAsCsv
+                         mergeOptions
               addCommand "count"
-                         "Print the count Mof all records stdout"
-                         (const countRecords)
-                         (pure ())
+                         "Print the count of all records"
+                         countRecords
+                         mergeOptions
               addCommand "chunks"
                          "Gather the records into chunks"
-                         (const chunkRecords)
-                         (pure ())
+                         chunks
+                         mergeOptions
 
 -- Version string
 ver ∷ String
@@ -95,7 +103,7 @@ head = ver ++ " -- © 2019 Magnolia Heights R&D.  All rights reserved."
 
 -- Program description, also for command line arguments
 desc ∷ String
-desc = "Operate on poker database.  For more information, try <COMMAND> --help"
+desc = "Operate on poker database.  For more information on <COMMAND>, try <COMMAND> --help"
 
 --
 getOptions :: IO (AppOptions, RIO App ())

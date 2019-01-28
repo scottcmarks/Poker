@@ -26,7 +26,10 @@ import Database.Persist.Sql (
                             )
 
 
-class (PersistEntity record, PersistEntityBackend record ~ BaseBackend (BaseBackend SqlBackend)) => SqlPersistEntity record
+class (
+    PersistEntity record
+  , PersistEntityBackend record ~ BaseBackend (BaseBackend SqlBackend)
+  ) => SqlPersistEntity record
 
 
 type SqlActionT m = ReaderT SqlBackend (NoLoggingT (ResourceT m))
@@ -39,4 +42,3 @@ noFilters = []
 
 noSelectOpts :: [SelectOpt record]
 noSelectOpts = []
-
