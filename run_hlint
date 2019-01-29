@@ -1,0 +1,8 @@
+#!/bin/bash
+find /Users/scott/Poker                      \
+     -type f                                  \
+     -name '*.hs'                              \
+     -not -name '*.th.hs'                       \
+     -not -name 'dev.hs'                         \
+     -not -path '*/.stack-work/*'                 \
+     -exec /Users/scott/.local/bin/hlint $* {} ';'

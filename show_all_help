@@ -1,0 +1,4 @@
+#!/bin/bash
+poker --help | \
+perl -lane 'BEGIN{$g=0} print "echo \"\\n\"\npoker $F[0] --help\necho \"\\n\"" if $g; $g=1 if /commands:/' | \
+sh

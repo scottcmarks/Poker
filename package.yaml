@@ -1,10 +1,10 @@
 name:                Poker
 version:             0.1.0.1
 github:              scottcmarks/Poker
-license:             BSD3
+license:
 author:              Scott Marks
 maintainer:          scott@magnolia-heights.com
-copyright:           Magnolia Heights R&amp;D
+copyright:           Magnolia Heights R&D
 
 extra-source-files:
 - README.md
@@ -12,7 +12,9 @@ extra-source-files:
 
 # Metadata used when publishing your package
 # synopsis:            Short description of your package
+synopsis:            Poker -- accessing and updating poker play results
 # category:            Web
+category:            Entertainment
 
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
@@ -22,18 +24,28 @@ description:         Please see the README on Github at <https://github.com/scot
 dependencies:
 - base >= 4.10 && < 10
 - rio >= 0.1.1.0
+- bytestring
+- conduit
+- containers
+- fmt
+- haskeline
+- lens
+- monad-logger
+- optparse-applicative
+- optparse-simple
+- parsec
 - persistent
 - persistent-sqlite
 - persistent-template
-- text
-- monad-logger
+- profunctors
 - resourcet
+- string-qq
+- text
+- time
 - transformers
-- fmt
-- optparse-simple
-- conduit
+- sqlite-simple
+- unix-time
 - unliftio-core
-- containers
 
 ghc-options:
 - -Wall
@@ -51,7 +63,6 @@ executables:
     source-dirs:         app
     dependencies:
     - Poker
-    - optparse-simple
 
     ghc-options:
     - -threaded

@@ -1,0 +1,77 @@
+:set -package Poker
+:load dev/DevMain.hs
+:set -XOverloadedStrings
+
+
+import Data.Map(Map, fromList)
+mab = fromList [("a","b")] :: Map Text Text
+mbc = fromList [("b","c")] :: Map Text Text
+
+import Data.Map.PokerExtras(inv,(⊙),(⊚))
+import Fmt((+||),(||+))
+"mab       =" +|| mab       ||+ "\n"
+"inv mab   =" +|| inv mab   ||+ "\n"
+"mbc       =" +|| mbc       ||+ "\n"
+"mbc ⊙ mab =" +|| mbc ⊙ mab ||+ "\n"
+"mab ⊚ mbc =" +|| mab ⊚ mbc ||+ "\n"
+
+import RIO(Ord, String, show, (==))
+capitals = fromList[("Idaho","Boise"),("Alabama","Montgomery"),("North Carolina","Raleigh")] :: Map String String
+abbrevs = fromList[("NC", "North Carolina"),("AL", "Alabama"),("TX","Texas")] :: Map String String
+
+ca = capitals ⊙ abbrevs
+ca == ( fromList [("AL","Montgomery"),("NC","Raleigh")] :: Map String String )
+show ca == show ( fromList [("AL","Montgomery"),("NC","Raleigh")] :: Map String String )
+
+import Data.List(head, find)
+record = head records
+
+
+import Poker.Driver.Schema((⋈))
+import PokerDB.Types
+import Data.Map(elems,keys,foldlWithKey,foldrWithKey)
+import RIO(Functor)
+import RIO((&),(++))
+import Control.Lens(Getting,(^.),to)
+import Data.Map((!))
+import System.IO(putStrLn, putStr)
+import Database.Persist.Sql(fromSqlKey)
+import Data.Monoid((<>))
+:set -XFlexibleContexts
+
+showLnAcc k a b = show (fromSqlKey k) <> " : " <> show a <> "\n" <> b
+putTableLn header table = putStr $ header <> foldrWithKey showLnAcc "" table
+showInvLnAcc a k b = show a <> " : " <> show (fromSqlKey k) <> "\n" <> b
+putInvTableLn header table = putStr $ header <> foldrWithKey showInvLnAcc "" table
+
+putTableLn "nidns:\n" nidns
+
+putTableLn "aidas:\n" aidas
+
+putTableLn "ridrs:\n" ridrs
+
+putTableLn "arids:\n" arids
+
+
+import Text.Parsec
+import RIO(Identity,undefined,Either(..))
+
+-- pmap = undefined :: Stream s Identity t => Map a b -> Parsec s () b
+
+:i tokenPrim
+
+import RIO(Maybe(..))
+import Options.Applicative.Builder(argument, maybeReader, Mod,ArgumentFields)
+import Options.Applicative.Types
+
+:t argument . maybeReader
+
+import Data.Map((!?))
+:t maybeReader (inv ridrs !?)
+
+import Options.Applicative(argument)
+
+:t argument (maybeReader (inv ridrs !?))
+
+import System.IO(putStrLn)
+putStrLn(" ⊚ ⋈ ok.")

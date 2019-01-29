@@ -1,29 +1,23 @@
+{-|
+Module      : Main
+Description : Executable main for poker
+Copyright   : (c) Magnolia Heights R&D, 2019
+License     : All rights reserved
+Maintainer  : scott@magnolia-heights.com
+Stability   : experimental
+
+Process the command line
+sending the resulting @(env, cmd)@ pair to 'runRIOLogging'.
+-}
 {-# LANGUAGE NoImplicitPrelude #-}
 
-module Main
-where
+module Main where
 
-import RIO
-import App
-import Options(getOptions)
-import RIO.Process(mkDefaultProcessContext)
-import Run(run)
+import           RIO          (IO, uncurry, (>>=))
 
+import           Poker.Driver (getAppAndCommand, runRIOLogging)
+
+-- | Main
+--
 main :: IO ()
-main = do
-  ( options @ AppOptions{ appOptionsVerbose    = verbose
-                        , appOptionsDbFilePath = dbFilePath
-                        }
-   ,
-    runCmd
-   ) <- getOptions
-  lo <- logOptionsHandle stderr verbose
-  pc <- mkDefaultProcessContext
-  withLogFunc lo $ \lf ->
-    let app = App { appLogFunc        = lf
-                  , appProcessContext = pc
-                  , appAppOptions     = options
-                  , appVerbose        = verbose
-                  , appDbFilePath     = fromString dbFilePath
-                  }
-     in runRIO app $ run runCmd
+main = getAppAndCommand >>= uncurry runRIOLogging

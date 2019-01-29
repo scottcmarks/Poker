@@ -1,0 +1,3 @@
+[submodule "PokerDB"]
+	path = PokerDB
+	url = git+ssh://jackie@minerva/repo/PokerDB.git

@@ -1,0 +1,195 @@
+digraph G {
+	graph [ratio=fill,
+		size="6,4"
+	];
+	subgraph cluster_0 {
+		graph [color="#0000000F",
+			label=Data,
+			style=filled
+		];
+		subgraph cluster_1 {
+			graph [color="#0000000F",
+				label=Conduit,
+				style=filled
+			];
+			subgraph cluster_2 {
+				graph [color="#0000000F",
+					label=HChunk,
+					style=filled
+				];
+				u0				 [fillcolor="#bbbbff",
+					label=HChunk,
+					style="filled,bold"];
+				u1				 [fillcolor="#ffbbbb",
+					label=Internal,
+					penwidth=0,
+					style=filled];
+				u2				 [fillcolor="#ffbbbb",
+					label=Types,
+					penwidth=0,
+					style=filled];
+			}
+		}
+		subgraph cluster_3 {
+			graph [color="#0000000F",
+				label=Dates,
+				style=filled
+			];
+			u3			 [fillcolor="#ffffbb",
+				label=Dates,
+				style="filled,bold"];
+			u4			 [fillcolor="#bbffff",
+				label=Internal,
+				penwidth=0,
+				style=filled];
+			u5			 [fillcolor="#bbffff",
+				label=Types,
+				penwidth=0,
+				style=filled];
+			u6			 [fillcolor="#bbffff",
+				label=Formats,
+				penwidth=0,
+				style=filled];
+		}
+		subgraph cluster_4 {
+			graph [color="#0000000F",
+				label=Map,
+				style=filled
+			];
+			u7			 [fillcolor="#ffbbff",
+				label=PokerExtras,
+				penwidth=0,
+				style=filled];
+		}
+	}
+	subgraph cluster_5 {
+		graph [color="#0000000F",
+			label=Database,
+			style=filled
+		];
+		subgraph cluster_6 {
+			graph [color="#0000000F",
+				label=Persist,
+				style=filled
+			];
+			subgraph cluster_7 {
+				graph [color="#0000000F",
+					label=Sql,
+					style=filled
+				];
+				subgraph cluster_8 {
+					graph [color="#0000000F",
+						label=PokerExtras,
+						style=filled
+					];
+					u8					 [fillcolor="#7777ff",
+						label=PokerExtras,
+						style="filled,bold"];
+					u9					 [fillcolor="#ff7777",
+						label=Internal,
+						penwidth=0,
+						style=filled];
+					u10					 [fillcolor="#ff7777",
+						label=Types,
+						penwidth=0,
+						style=filled];
+				}
+			}
+		}
+	}
+	subgraph cluster_9 {
+		graph [color="#0000000F",
+			label=Options,
+			style=filled
+		];
+		subgraph cluster_10 {
+			graph [color="#0000000F",
+				label=Applicative,
+				style=filled
+			];
+			u11			 [fillcolor="#ff77ff",
+				label=PokerExtras,
+				penwidth=0,
+				style=filled];
+		}
+	}
+	subgraph cluster_11 {
+		graph [color="#0000000F",
+			label=Poker,
+			style=filled
+		];
+		subgraph cluster_12 {
+			graph [color="#0000000F",
+				label=DB,
+				style=filled
+			];
+			u13			 [fillcolor="#33ff33",
+				label=DB,
+				style="filled,bold"];
+			u14			 [fillcolor="#bbff77",
+				label=Schema,
+				penwidth=0,
+				style=filled];
+			u15			 [fillcolor="#bbff77",
+				label=Types,
+				penwidth=0,
+				style=filled];
+		}
+		subgraph cluster_13 {
+			graph [color="#0000000F",
+				label=Driver,
+				style=filled
+			];
+			u16			 [fillcolor="#33ff33",
+				label=Driver,
+				style="filled,bold"];
+			u17			 [fillcolor="#3333ff",
+				label=CommandLine,
+				penwidth=0,
+				style=filled];
+			u18			 [fillcolor="#3333ff",
+				label=Run,
+				penwidth=0,
+				style=filled];
+			u19			 [fillcolor="#3333ff",
+				label=Process,
+				penwidth=0,
+				style=filled];
+			u20			 [fillcolor="#3333ff",
+				label=Schema,
+				penwidth=0,
+				style=filled];
+		}
+		u12		 [fillcolor="#33ff33",
+			label=App,
+			penwidth=0,
+			style=filled];
+	}
+	u21	 [fillcolor="#bbffbb",
+		label=Main,
+		penwidth=0,
+		style=filled];
+	u21 -> u16;
+	u0 -> u1;
+	u1 -> u2;
+	u3 -> u4;
+	u3 -> u5;
+	u6 -> u4;
+	u6 -> u5;
+	u8 -> u9;
+	u8 -> u10;
+	u11 -> u7;
+	u12 -> u7;
+	u12 -> u8;
+	u12 -> u13;
+	u13 -> u14;
+	u14 -> u15;
+	u16 -> u17;
+	u17 -> u3;
+	u17 -> u11;
+	u17 -> u18;
+	u18 -> u19;
+	u19 -> u0;
+	u19 -> u20;
+	u20 -> u12;
+}
