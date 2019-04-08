@@ -1,7 +1,6 @@
-{-# OPTIONS_GHC -fno-warn-type-defaults #-}
 {-|
 Module      : Database.Persist.Sql.PokerExtras.Internal
-Description : Executable main for poker
+Description : Internal module for Database.Persist.Sql
 Copyright   : (c) Magnolia Heights R&D, 2019
 License     : All rights reserved
 Maintainer  : scott@magnolia-heights.com
@@ -20,6 +19,7 @@ The implementation of 'sum' is essentially a fork of the code for
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE RankNTypes        #-}
 {-# LANGUAGE TypeFamilies      #-}
+{-# OPTIONS_GHC -fno-warn-type-defaults #-}
 
 
 module Database.Persist.Sql.PokerExtras.Internal

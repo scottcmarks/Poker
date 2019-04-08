@@ -136,9 +136,11 @@ csv :: Map Record_NoteId String -> Record_Poker -> String
 csv note_ids (Record_Poker d a nId) =
     ""+|d|+ ","+|padLeftF 5 ' ' (a^.moneyInt)|+","+||(note_ids!nId)||+ ""
 
+-- | pull out @notes.note@ as a 'String'
 showNote :: Record_Note -> String
 showNote = (^. note . noteStr)
 
+-- | IO action to show a note, with newline
 listNote :: Record_Note -> IO ()
 listNote n = showNote n |+ "\n"
 
@@ -177,7 +179,7 @@ runSqlite' = runSqliteMigrating -- or runSqlite in release version
 
 --  Sql(ite) + Record_Poker (migrateall) + RIO -----
 
--- | Run a 'SqlRIO' action with 'connStr' to define a 'RIO' action
+-- | Run a 'SqlRIO' action with @connStr@ to define a 'RIO' action
 --   in the RIO env m monad
 runSqlRIO :: (HasConnectionString env) => SqlRIO env a -> RIO env a
 runSqlRIO actions = do
@@ -334,12 +336,16 @@ fromAppOptions opts = do
           where
             nn = (inv $ notes ⋈ note)
 
-
+-- | get the entity pointed to by a 'Key'
+--   unsafe if not in DB
 deref :: (SqlPersistEntity a, MonadIO c) =>
       Key a
    -> SqlPersistT c a
 deref k = get k <&> fromJust
 
+
+-- | get the entity pointed to by a 'Key' accessed by a 'Getting' lens
+--   unsafe if not in DB
 (^->) :: (MonadIO c, SqlPersistEntity a) =>
       s
    -> Getting (Key a) s (Key a)

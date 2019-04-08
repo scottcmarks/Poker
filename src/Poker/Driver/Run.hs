@@ -1,5 +1,3 @@
-{-# LANGUAGE OverloadedStrings #-}
-{-# OPTIONS_GHC -fno-warn-type-defaults #-}
 {-|
 Module      : Poker.Driver.Run
 Description : Command implementation
@@ -13,6 +11,7 @@ Definitions of command implementations and the runner 'runRIOLogging'.
 {-# LANGUAGE NoImplicitPrelude #-}
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE QuasiQuotes       #-}
+{-# OPTIONS_GHC -fno-warn-type-defaults #-}
 
 module Poker.Driver.Run
   ( countRecords

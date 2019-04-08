@@ -1,4 +1,4 @@
-{-
+{-|
 Module      : Poker.Driver.CommandLine
 Description : Command line parsing to drive executable main for poker
 Copyright   : (c) Magnolia Heights R&D, 2019

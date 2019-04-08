@@ -177,7 +177,8 @@ mapStr m = do
 -- | Build an argument 'Parser' @a@ from a 'Map' 'String' -> @a@
 --   This allows specifying the default 'Options.Applicative.Builder.value' as
 --   a 'String' and simply specifying 'Options.Applicative.Builder.showDefault',
---   since the 'Mod' 'ArgumentFields' are over 'String' (as with strArgument),
+--   since the 'Mod' 'ArgumentFields' are over 'String'
+--   (as with 'Options.Applicative.strArgument'),
 --   with this code using the map as necessary as an isomorphism  between
 --   'String' and @a@.
 mapArgument :: Ord a =>

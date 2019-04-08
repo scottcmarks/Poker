@@ -134,14 +134,18 @@ processedRecordSource isHeader isMerged =
   where
     yieldChunk (HChunk header body) = maybeToList header ++ body
 
+-- | Source of the contents of the @notes@ table
 noteSource :: CRSA () Record_Note ()
 noteSource = recordSource
 
+-- | Source of the contents of the @roles@ table
 roleSource :: CRSA () Record_Role ()
 roleSource = recordSource
 
+-- | Source of the contents of the @actions@ table
 actionSource :: CRSA () Record_Action ()
 actionSource = recordSource
 
+-- | Source of the contents of the @action_role@ table
 actionRoleSource :: CRSA () Record_Action_Role ()
 actionRoleSource = recordSource

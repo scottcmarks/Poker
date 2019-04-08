@@ -1,9 +1,18 @@
+{-|
+Module      : Database.Persist.Sql.PokerExtras.Types
+Description : Extra types used by the Poker extension to Database.Persist.Sql
+Copyright   : (c) Magnolia Heights R&D, 2019
+License     : All rights reserved
+Maintainer  : scott@magnolia-heights.com
+Stability   : experimental
+
+Types used by the Poker extension to Database.Persist.Sql
+Despite the name, this module uses nothing Poker-schema-specific
+-}
 {-# LANGUAGE GADTs             #-}
 {-# LANGUAGE NoImplicitPrelude #-}
 
--- | Types used by the Poker extension to Database.Persist.Sql
--- Despite the name, this module uses nothing Poker-schema-specific
---
+
 module Database.Persist.Sql.PokerExtras.Types
     ( SqlActionT
     , SqlRIO

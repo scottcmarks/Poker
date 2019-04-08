@@ -3,12 +3,8 @@
 *.swp
 tarballs/
 .stack-work/
-Poker.db
-Poker.*.db
 *.csv
-unpacked/
 *.json
 unpacked
 auth
-db/
 *.th.hs

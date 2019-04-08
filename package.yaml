@@ -46,6 +46,10 @@ dependencies:
 - sqlite-simple
 - unix-time
 - unliftio-core
+- data-ordlist # new
+- List         # new
+
+
 
 ghc-options:
 - -Wall
@@ -53,6 +57,7 @@ ghc-options:
 - -Wincomplete-record-updates
 - -Wincomplete-uni-patterns
 - -Wredundant-constraints
+- -optP-Wno-nonportable-include-path # workaround [Filename case on macOS · Issue #4739 · haskell/cabal](https://github.com/haskell/cabal/issues/4739)
 
 library:
   source-dirs: src

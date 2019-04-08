@@ -1,6 +1,6 @@
 {-|
 Module      : Data.Conduit.HChunk.Internal
-Description : Executable main for poker
+Description : Chunking conduit internal module
 Copyright   : (c) Magnolia Heights R&D, 2019
 License     : All rights reserved
 Maintainer  : scott@magnolia-heights.com

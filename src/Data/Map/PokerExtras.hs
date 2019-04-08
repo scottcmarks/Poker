@@ -7,7 +7,6 @@ Maintainer  : scott@magnolia-heights.com
 Stability   : experimental
 
 Potentially lossy composition of maps-as-functions, and inverse map.
-
 -}
 
 {-# LANGUAGE NoImplicitPrelude #-}
