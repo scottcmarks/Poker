@@ -1,5 +1,5 @@
 name:                Poker
-version:             0.1.0.1
+version:             0.1.1
 github:              scottcmarks/Poker
 license:
 author:              Scott Marks
@@ -24,9 +24,11 @@ description:         Please see the README on Github at <https://github.com/scot
 dependencies:
 - base >= 4.10 && < 10
 - rio >= 0.1.1.0
+- List
 - bytestring
 - conduit
 - containers
+- data-ordlist
 - fmt
 - haskeline
 - lens
@@ -46,9 +48,6 @@ dependencies:
 - sqlite-simple
 - unix-time
 - unliftio-core
-- data-ordlist # new
-- List         # new
-
 
 
 ghc-options:
