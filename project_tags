@@ -443,7 +443,7 @@ Record_Action_Role Record_Action_Role72,73
 Record_Note Record_Note79,80
 Record_Poker Record_Poker87,88
 
-./src/Poker/DB/Types.th.hs,819
+./src/Poker/DB/Types.th.hs,193
 actionStr actionStr1,2
 moneyInt moneyInt9,10
 noteStr noteStr17,18
@@ -452,30 +452,6 @@ actionStr actionStr33,34
 moneyInt moneyInt41,42
 noteStr noteStr49,50
 roleStr roleStr57,58
-actionStr actionStr65,66
-moneyInt moneyInt73,74
-noteStr noteStr81,82
-roleStr roleStr89,90
-actionStr actionStr97,98
-moneyInt moneyInt105,106
-noteStr noteStr113,114
-roleStr roleStr121,122
-actionStr actionStr129,130
-moneyInt moneyInt137,138
-noteStr noteStr145,146
-roleStr roleStr153,154
-actionStr actionStr161,162
-moneyInt moneyInt169,170
-noteStr noteStr177,178
-roleStr roleStr185,186
-actionStr actionStr193,194
-moneyInt moneyInt201,202
-noteStr noteStr209,210
-roleStr roleStr217,218
-actionStr actionStr225,226
-moneyInt moneyInt233,234
-noteStr noteStr241,242
-roleStr roleStr249,250
 
 ./src/Poker/DB/Types.hs,333
 module Poker.DB.TypesPoker.DB.Types26,27
@@ -488,1367 +464,347 @@ newtype ExplanatoryNote ExplanatoryNote59,60
 newtype ProcessingRole ProcessingRole68,69
     _roleStr _roleStr71,72
 
-./src/Poker/DB/Schema.th.hs,132271
+./src/Poker/DB/Schema.th.hs,32632
 instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Action1,2
   Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue2,3
   Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue10,11
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Action27,28
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType28,29
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Role30,31
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue31,32
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue39,40
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Role56,57
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType57,58
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Action_Role59,60
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue60,61
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue69,70
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Action_Role86,87
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType87,88
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Note89,90
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue90,91
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue99,100
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Note116,117
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType117,118
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Poker119,120
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue120,121
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue129,130
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Poker146,147
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType147,148
-data Record_ActionRecord_Action149,150
-  = Record_Action Record_Action150,151
-  = Record_Action {_action _action150,151
-type Record_ActionId Record_ActionId152,153
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Action154,155
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend155,156
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique156,157
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key157,158
-    = Record_ActionKey Record_ActionKey158,159
-    = Record_ActionKey {unRecord_ActionKey unRecord_ActionKey158,159
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField170,171
-    = typtyp171,172
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues176,177
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues181,182
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef186,187
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields226,227
-  Database.Persist.Class.PersistEntity.fromPersistValues Database.Persist.Class.PersistEntity.fromPersistValues229,230
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames244,245
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues246,247
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys248,249
-  Database.Persist.Class.PersistEntity.persistFieldDefDatabase.Persist.Class.PersistEntity.persistFieldDef251,252
-  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField281,282
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens283,284
-action action299,300
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Action309,310
-  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey310,311
-  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey312,313
-data Record_RoleRecord_Role314,315
-  = Record_Role Record_Role315,316
-  = Record_Role {_role _role315,316
-type Record_RoleId Record_RoleId317,318
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Role319,320
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend320,321
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique321,322
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key322,323
-    = Record_RoleKey Record_RoleKey323,324
-    = Record_RoleKey {unRecord_RoleKey unRecord_RoleKey323,324
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField335,336
-    = typtyp336,337
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues341,342
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues346,347
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef351,352
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields391,392
-  Database.Persist.Class.PersistEntity.fromPersistValues Database.Persist.Class.PersistEntity.fromPersistValues394,395
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames409,410
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues411,412
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys413,414
-  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef416,417
-  Database.Persist.Class.PersistEntity.persistIdField Database.Persist.Class.PersistEntity.persistIdField445,446
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens446,447
-role role461,462
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Role471,472
-  Database.Persist.Class.PersistStore.toBackendKey Database.Persist.Class.PersistStore.toBackendKey472,473
-  Database.Persist.Class.PersistStore.fromBackendKey Database.Persist.Class.PersistStore.fromBackendKey473,474
-data Record_Action_RoleRecord_Action_Role474,475
-  = Record_Action_Role Record_Action_Role475,476
-  = Record_Action_Role {_action_id _action_id475,476
-                        _role_id _role_id476,477
-type Record_Action_RoleId Record_Action_RoleId478,479
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Action_Role480,481
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend481,482
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique482,483
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key483,484
-    = Record_Action_RoleKey Record_Action_RoleKey484,485
-    = Record_Action_RoleKey {unRecord_Action_RoleKey unRecord_Action_RoleKey484,485
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField496,497
-    = typtyp497,498
-      typtyp505,506
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues509,510
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues514,515
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef519,520
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields582,583
-  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues586,587
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames608,609
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues610,611
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys612,613
-  Database.Persist.Class.PersistEntity.persistFieldDefDatabase.Persist.Class.PersistEntity.persistFieldDef615,616
-  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField667,668
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens669,670
-action_id action_id694,695
-role_id role_id705,706
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Action_Role716,717
-  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey717,718
-  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey719,720
-data Record_NoteRecord_Note721,722
-  = Record_Note Record_Note722,723
-  = Record_Note {_note _note722,723
-                 _action_role_id _action_role_id723,724
-type Record_NoteId Record_NoteId725,726
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Note727,728
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend728,729
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique729,730
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key730,731
-    = Record_NoteKey Record_NoteKey731,732
-    = Record_NoteKey {unRecord_NoteKey unRecord_NoteKey731,732
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField743,744
-    = typtyp744,745
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues753,754
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues758,759
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef763,764
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields820,821
-  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues824,825
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames846,847
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues848,849
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys850,851
-  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef853,854
-  Database.Persist.Class.PersistEntity.persistIdField Database.Persist.Class.PersistEntity.persistIdField899,900
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens900,901
-note note924,925
-action_role_id action_role_id934,935
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Note945,946
-  Database.Persist.Class.PersistStore.toBackendKey Database.Persist.Class.PersistStore.toBackendKey946,947
-  Database.Persist.Class.PersistStore.fromBackendKey Database.Persist.Class.PersistStore.fromBackendKey947,948
-data Record_PokerRecord_Poker948,949
-  = Record_Poker Record_Poker949,950
-  = Record_Poker {_date _date949,950
-                  _amount _amount950,951
-                  _note_id _note_id951,952
-type Record_PokerId Record_PokerId953,954
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Poker955,956
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend956,957
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique957,958
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key958,959
-    = Record_PokerKey Record_PokerKey959,960
-    = Record_PokerKey {unRecord_PokerKey unRecord_PokerKey959,960
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField971,972
-    = typtyp972,973
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues982,983
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues987,988
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef992,993
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields1060,1061
-  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues1065,1066
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames1093,1094
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues1095,1096
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys1097,1098
-  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef1100,1101
-  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField1158,1159
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens1160,1161
-date date1193,1194
-amount amount1202,1203
-note_id note_id1211,1212
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Poker1222,1223
-  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey1223,1224
-  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey1225,1226
-migrateAll migrateAll1227,1228
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Action1762,1763
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue1763,1764
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue1771,1772
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Action1788,1789
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType1789,1790
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Role1791,1792
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue1792,1793
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue1800,1801
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Role1817,1818
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType1818,1819
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Action_Role1820,1821
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue1821,1822
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue1830,1831
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Action_Role1847,1848
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType1848,1849
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Note1850,1851
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue1851,1852
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue1860,1861
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Note1877,1878
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType1878,1879
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Poker1880,1881
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue1881,1882
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue1890,1891
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Poker1907,1908
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType1908,1909
-data Record_ActionRecord_Action1910,1911
-  = Record_Action Record_Action1911,1912
-  = Record_Action {_action _action1911,1912
-type Record_ActionId Record_ActionId1913,1914
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Action1915,1916
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend1916,1917
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique1917,1918
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key1918,1919
-    = Record_ActionKey Record_ActionKey1919,1920
-    = Record_ActionKey {unRecord_ActionKey unRecord_ActionKey1919,1920
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField1931,1932
-    = typtyp1932,1933
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues1937,1938
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues1942,1943
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef1947,1948
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields1987,1988
-  Database.Persist.Class.PersistEntity.fromPersistValues Database.Persist.Class.PersistEntity.fromPersistValues1990,1991
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames2005,2006
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues2007,2008
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys2009,2010
-  Database.Persist.Class.PersistEntity.persistFieldDefDatabase.Persist.Class.PersistEntity.persistFieldDef2012,2013
-  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField2042,2043
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens2044,2045
-action action2060,2061
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Action2070,2071
-  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey2071,2072
-  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey2073,2074
-data Record_RoleRecord_Role2075,2076
-  = Record_Role Record_Role2076,2077
-  = Record_Role {_role _role2076,2077
-type Record_RoleId Record_RoleId2078,2079
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Role2080,2081
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend2081,2082
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique2082,2083
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key2083,2084
-    = Record_RoleKey Record_RoleKey2084,2085
-    = Record_RoleKey {unRecord_RoleKey unRecord_RoleKey2084,2085
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField2096,2097
-    = typtyp2097,2098
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues2102,2103
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues2107,2108
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef2112,2113
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields2152,2153
-  Database.Persist.Class.PersistEntity.fromPersistValues Database.Persist.Class.PersistEntity.fromPersistValues2155,2156
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames2170,2171
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues2172,2173
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys2174,2175
-  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef2177,2178
-  Database.Persist.Class.PersistEntity.persistIdField Database.Persist.Class.PersistEntity.persistIdField2206,2207
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens2207,2208
-role role2222,2223
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Role2232,2233
-  Database.Persist.Class.PersistStore.toBackendKey Database.Persist.Class.PersistStore.toBackendKey2233,2234
-  Database.Persist.Class.PersistStore.fromBackendKey Database.Persist.Class.PersistStore.fromBackendKey2234,2235
-data Record_Action_RoleRecord_Action_Role2235,2236
-  = Record_Action_Role Record_Action_Role2236,2237
-  = Record_Action_Role {_action_id _action_id2236,2237
-                        _role_id _role_id2237,2238
-type Record_Action_RoleId Record_Action_RoleId2239,2240
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Action_Role2241,2242
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend2242,2243
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique2243,2244
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key2244,2245
-    = Record_Action_RoleKey Record_Action_RoleKey2245,2246
-    = Record_Action_RoleKey {unRecord_Action_RoleKey unRecord_Action_RoleKey2245,2246
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField2257,2258
-    = typtyp2258,2259
-      typtyp2266,2267
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues2270,2271
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues2275,2276
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef2280,2281
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields2343,2344
-  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues2347,2348
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames2369,2370
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues2371,2372
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys2373,2374
-  Database.Persist.Class.PersistEntity.persistFieldDefDatabase.Persist.Class.PersistEntity.persistFieldDef2376,2377
-  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField2428,2429
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens2430,2431
-action_id action_id2455,2456
-role_id role_id2466,2467
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Action_Role2477,2478
-  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey2478,2479
-  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey2480,2481
-data Record_NoteRecord_Note2482,2483
-  = Record_Note Record_Note2483,2484
-  = Record_Note {_note _note2483,2484
-                 _action_role_id _action_role_id2484,2485
-type Record_NoteId Record_NoteId2486,2487
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Note2488,2489
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend2489,2490
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique2490,2491
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key2491,2492
-    = Record_NoteKey Record_NoteKey2492,2493
-    = Record_NoteKey {unRecord_NoteKey unRecord_NoteKey2492,2493
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField2504,2505
-    = typtyp2505,2506
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues2514,2515
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues2519,2520
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef2524,2525
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields2581,2582
-  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues2585,2586
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames2607,2608
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues2609,2610
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys2611,2612
-  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef2614,2615
-  Database.Persist.Class.PersistEntity.persistIdField Database.Persist.Class.PersistEntity.persistIdField2660,2661
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens2661,2662
-note note2685,2686
-action_role_id action_role_id2695,2696
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Note2706,2707
-  Database.Persist.Class.PersistStore.toBackendKey Database.Persist.Class.PersistStore.toBackendKey2707,2708
-  Database.Persist.Class.PersistStore.fromBackendKey Database.Persist.Class.PersistStore.fromBackendKey2708,2709
-data Record_PokerRecord_Poker2709,2710
-  = Record_Poker Record_Poker2710,2711
-  = Record_Poker {_date _date2710,2711
-                  _amount _amount2711,2712
-                  _note_id _note_id2712,2713
-type Record_PokerId Record_PokerId2714,2715
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Poker2716,2717
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend2717,2718
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique2718,2719
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key2719,2720
-    = Record_PokerKey Record_PokerKey2720,2721
-    = Record_PokerKey {unRecord_PokerKey unRecord_PokerKey2720,2721
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField2732,2733
-    = typtyp2733,2734
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues2743,2744
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues2748,2749
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef2753,2754
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields2821,2822
-  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues2826,2827
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames2854,2855
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues2856,2857
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys2858,2859
-  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef2861,2862
-  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField2919,2920
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens2921,2922
-date date2954,2955
-amount amount2963,2964
-note_id note_id2972,2973
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Poker2983,2984
-  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey2984,2985
-  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey2986,2987
-migrateAll migrateAll2988,2989
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Action3523,3524
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue3524,3525
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue3532,3533
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Action3549,3550
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType3550,3551
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Role3552,3553
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue3553,3554
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue3561,3562
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Role3578,3579
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType3579,3580
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Action_Role3581,3582
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue3582,3583
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue3591,3592
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Action_Role3608,3609
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType3609,3610
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Note3611,3612
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue3612,3613
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue3621,3622
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Note3638,3639
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType3639,3640
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Poker3641,3642
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue3642,3643
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue3651,3652
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Poker3668,3669
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType3669,3670
-data Record_ActionRecord_Action3671,3672
-  = Record_Action Record_Action3672,3673
-  = Record_Action {_action _action3672,3673
-type Record_ActionId Record_ActionId3674,3675
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Action3676,3677
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend3677,3678
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique3678,3679
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key3679,3680
-    = Record_ActionKey Record_ActionKey3680,3681
-    = Record_ActionKey {unRecord_ActionKey unRecord_ActionKey3680,3681
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField3692,3693
-    = typtyp3693,3694
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues3698,3699
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues3703,3704
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef3708,3709
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields3748,3749
-  Database.Persist.Class.PersistEntity.fromPersistValues Database.Persist.Class.PersistEntity.fromPersistValues3751,3752
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames3766,3767
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues3768,3769
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys3770,3771
-  Database.Persist.Class.PersistEntity.persistFieldDefDatabase.Persist.Class.PersistEntity.persistFieldDef3773,3774
-  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField3803,3804
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens3805,3806
-action action3821,3822
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Action3831,3832
-  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey3832,3833
-  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey3834,3835
-data Record_RoleRecord_Role3836,3837
-  = Record_Role Record_Role3837,3838
-  = Record_Role {_role _role3837,3838
-type Record_RoleId Record_RoleId3839,3840
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Role3841,3842
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend3842,3843
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique3843,3844
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key3844,3845
-    = Record_RoleKey Record_RoleKey3845,3846
-    = Record_RoleKey {unRecord_RoleKey unRecord_RoleKey3845,3846
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField3857,3858
-    = typtyp3858,3859
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues3863,3864
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues3868,3869
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef3873,3874
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields3913,3914
-  Database.Persist.Class.PersistEntity.fromPersistValues Database.Persist.Class.PersistEntity.fromPersistValues3916,3917
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames3931,3932
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues3933,3934
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys3935,3936
-  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef3938,3939
-  Database.Persist.Class.PersistEntity.persistIdField Database.Persist.Class.PersistEntity.persistIdField3967,3968
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens3968,3969
-role role3983,3984
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Role3993,3994
-  Database.Persist.Class.PersistStore.toBackendKey Database.Persist.Class.PersistStore.toBackendKey3994,3995
-  Database.Persist.Class.PersistStore.fromBackendKey Database.Persist.Class.PersistStore.fromBackendKey3995,3996
-data Record_Action_RoleRecord_Action_Role3996,3997
-  = Record_Action_Role Record_Action_Role3997,3998
-  = Record_Action_Role {_action_id _action_id3997,3998
-                        _role_id _role_id3998,3999
-type Record_Action_RoleId Record_Action_RoleId4000,4001
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Action_Role4002,4003
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend4003,4004
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique4004,4005
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key4005,4006
-    = Record_Action_RoleKey Record_Action_RoleKey4006,4007
-    = Record_Action_RoleKey {unRecord_Action_RoleKey unRecord_Action_RoleKey4006,4007
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField4018,4019
-    = typtyp4019,4020
-      typtyp4027,4028
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues4031,4032
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues4036,4037
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef4041,4042
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields4104,4105
-  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues4108,4109
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames4130,4131
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues4132,4133
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys4134,4135
-  Database.Persist.Class.PersistEntity.persistFieldDefDatabase.Persist.Class.PersistEntity.persistFieldDef4137,4138
-  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField4189,4190
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens4191,4192
-action_id action_id4216,4217
-role_id role_id4227,4228
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Action_Role4238,4239
-  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey4239,4240
-  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey4241,4242
-data Record_NoteRecord_Note4243,4244
-  = Record_Note Record_Note4244,4245
-  = Record_Note {_note _note4244,4245
-                 _action_role_id _action_role_id4245,4246
-type Record_NoteId Record_NoteId4247,4248
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Note4249,4250
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend4250,4251
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique4251,4252
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key4252,4253
-    = Record_NoteKey Record_NoteKey4253,4254
-    = Record_NoteKey {unRecord_NoteKey unRecord_NoteKey4253,4254
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField4265,4266
-    = typtyp4266,4267
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues4275,4276
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues4280,4281
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef4285,4286
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields4342,4343
-  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues4346,4347
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames4368,4369
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues4370,4371
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys4372,4373
-  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef4375,4376
-  Database.Persist.Class.PersistEntity.persistIdField Database.Persist.Class.PersistEntity.persistIdField4421,4422
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens4422,4423
-note note4446,4447
-action_role_id action_role_id4456,4457
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Note4467,4468
-  Database.Persist.Class.PersistStore.toBackendKey Database.Persist.Class.PersistStore.toBackendKey4468,4469
-  Database.Persist.Class.PersistStore.fromBackendKey Database.Persist.Class.PersistStore.fromBackendKey4469,4470
-data Record_PokerRecord_Poker4470,4471
-  = Record_Poker Record_Poker4471,4472
-  = Record_Poker {_date _date4471,4472
-                  _amount _amount4472,4473
-                  _note_id _note_id4473,4474
-type Record_PokerId Record_PokerId4475,4476
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Poker4477,4478
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend4478,4479
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique4479,4480
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key4480,4481
-    = Record_PokerKey Record_PokerKey4481,4482
-    = Record_PokerKey {unRecord_PokerKey unRecord_PokerKey4481,4482
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField4493,4494
-    = typtyp4494,4495
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues4504,4505
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues4509,4510
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef4514,4515
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields4582,4583
-  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues4587,4588
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames4615,4616
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues4617,4618
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys4619,4620
-  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef4622,4623
-  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField4680,4681
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens4682,4683
-date date4715,4716
-amount amount4724,4725
-note_id note_id4733,4734
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Poker4744,4745
-  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey4745,4746
-  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey4747,4748
-migrateAll migrateAll4749,4750
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Action5284,5285
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue5285,5286
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue5293,5294
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Action5310,5311
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType5311,5312
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Role5313,5314
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue5314,5315
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue5322,5323
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Role5339,5340
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType5340,5341
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Action_Role5342,5343
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue5343,5344
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue5352,5353
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Action_Role5369,5370
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType5370,5371
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Note5372,5373
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue5373,5374
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue5382,5383
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Note5399,5400
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType5400,5401
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Poker5402,5403
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue5403,5404
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue5412,5413
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Poker5429,5430
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType5430,5431
-data Record_ActionRecord_Action5432,5433
-  = Record_Action Record_Action5433,5434
-  = Record_Action {_action _action5433,5434
-type Record_ActionId Record_ActionId5435,5436
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Action5437,5438
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend5438,5439
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique5439,5440
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key5440,5441
-    = Record_ActionKey Record_ActionKey5441,5442
-    = Record_ActionKey {unRecord_ActionKey unRecord_ActionKey5441,5442
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField5453,5454
-    = typtyp5454,5455
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues5459,5460
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues5464,5465
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef5469,5470
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields5509,5510
-  Database.Persist.Class.PersistEntity.fromPersistValues Database.Persist.Class.PersistEntity.fromPersistValues5512,5513
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames5527,5528
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues5529,5530
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys5531,5532
-  Database.Persist.Class.PersistEntity.persistFieldDefDatabase.Persist.Class.PersistEntity.persistFieldDef5534,5535
-  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField5564,5565
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens5566,5567
-action action5582,5583
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Action5592,5593
-  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey5593,5594
-  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey5595,5596
-data Record_RoleRecord_Role5597,5598
-  = Record_Role Record_Role5598,5599
-  = Record_Role {_role _role5598,5599
-type Record_RoleId Record_RoleId5600,5601
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Role5602,5603
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend5603,5604
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique5604,5605
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key5605,5606
-    = Record_RoleKey Record_RoleKey5606,5607
-    = Record_RoleKey {unRecord_RoleKey unRecord_RoleKey5606,5607
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField5618,5619
-    = typtyp5619,5620
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues5624,5625
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues5629,5630
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef5634,5635
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields5674,5675
-  Database.Persist.Class.PersistEntity.fromPersistValues Database.Persist.Class.PersistEntity.fromPersistValues5677,5678
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames5692,5693
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues5694,5695
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys5696,5697
-  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef5699,5700
-  Database.Persist.Class.PersistEntity.persistIdField Database.Persist.Class.PersistEntity.persistIdField5728,5729
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens5729,5730
-role role5744,5745
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Role5754,5755
-  Database.Persist.Class.PersistStore.toBackendKey Database.Persist.Class.PersistStore.toBackendKey5755,5756
-  Database.Persist.Class.PersistStore.fromBackendKey Database.Persist.Class.PersistStore.fromBackendKey5756,5757
-data Record_Action_RoleRecord_Action_Role5757,5758
-  = Record_Action_Role Record_Action_Role5758,5759
-  = Record_Action_Role {_action_id _action_id5758,5759
-                        _role_id _role_id5759,5760
-type Record_Action_RoleId Record_Action_RoleId5761,5762
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Action_Role5763,5764
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend5764,5765
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique5765,5766
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key5766,5767
-    = Record_Action_RoleKey Record_Action_RoleKey5767,5768
-    = Record_Action_RoleKey {unRecord_Action_RoleKey unRecord_Action_RoleKey5767,5768
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField5779,5780
-    = typtyp5780,5781
-      typtyp5788,5789
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues5792,5793
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues5797,5798
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef5802,5803
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields5865,5866
-  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues5869,5870
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames5891,5892
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues5893,5894
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys5895,5896
-  Database.Persist.Class.PersistEntity.persistFieldDefDatabase.Persist.Class.PersistEntity.persistFieldDef5898,5899
-  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField5950,5951
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens5952,5953
-action_id action_id5977,5978
-role_id role_id5988,5989
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Action_Role5999,6000
-  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey6000,6001
-  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey6002,6003
-data Record_NoteRecord_Note6004,6005
-  = Record_Note Record_Note6005,6006
-  = Record_Note {_note _note6005,6006
-                 _action_role_id _action_role_id6006,6007
-type Record_NoteId Record_NoteId6008,6009
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Note6010,6011
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend6011,6012
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique6012,6013
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key6013,6014
-    = Record_NoteKey Record_NoteKey6014,6015
-    = Record_NoteKey {unRecord_NoteKey unRecord_NoteKey6014,6015
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField6026,6027
-    = typtyp6027,6028
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues6036,6037
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues6041,6042
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef6046,6047
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields6103,6104
-  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues6107,6108
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames6129,6130
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues6131,6132
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys6133,6134
-  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef6136,6137
-  Database.Persist.Class.PersistEntity.persistIdField Database.Persist.Class.PersistEntity.persistIdField6182,6183
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens6183,6184
-note note6207,6208
-action_role_id action_role_id6217,6218
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Note6228,6229
-  Database.Persist.Class.PersistStore.toBackendKey Database.Persist.Class.PersistStore.toBackendKey6229,6230
-  Database.Persist.Class.PersistStore.fromBackendKey Database.Persist.Class.PersistStore.fromBackendKey6230,6231
-data Record_PokerRecord_Poker6231,6232
-  = Record_Poker Record_Poker6232,6233
-  = Record_Poker {_date _date6232,6233
-                  _amount _amount6233,6234
-                  _note_id _note_id6234,6235
-type Record_PokerId Record_PokerId6236,6237
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Poker6238,6239
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend6239,6240
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique6240,6241
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key6241,6242
-    = Record_PokerKey Record_PokerKey6242,6243
-    = Record_PokerKey {unRecord_PokerKey unRecord_PokerKey6242,6243
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField6254,6255
-    = typtyp6255,6256
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues6265,6266
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues6270,6271
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef6275,6276
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields6343,6344
-  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues6348,6349
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames6376,6377
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues6378,6379
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys6380,6381
-  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef6383,6384
-  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField6441,6442
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens6443,6444
-date date6476,6477
-amount amount6485,6486
-note_id note_id6494,6495
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Poker6505,6506
-  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey6506,6507
-  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey6508,6509
-migrateAll migrateAll6510,6511
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Action7045,7046
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue7046,7047
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue7054,7055
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Action7071,7072
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType7072,7073
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Role7074,7075
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue7075,7076
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue7083,7084
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Role7100,7101
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType7101,7102
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Action_Role7103,7104
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue7104,7105
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue7113,7114
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Action_Role7130,7131
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType7131,7132
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Note7133,7134
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue7134,7135
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue7143,7144
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Note7160,7161
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType7161,7162
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Poker7163,7164
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue7164,7165
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue7173,7174
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Poker7190,7191
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType7191,7192
-data Record_ActionRecord_Action7193,7194
-  = Record_Action Record_Action7194,7195
-  = Record_Action {_action _action7194,7195
-type Record_ActionId Record_ActionId7196,7197
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Action7198,7199
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend7199,7200
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique7200,7201
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key7201,7202
-    = Record_ActionKey Record_ActionKey7202,7203
-    = Record_ActionKey {unRecord_ActionKey unRecord_ActionKey7202,7203
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField7214,7215
-    = typtyp7215,7216
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues7220,7221
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues7225,7226
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef7230,7231
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields7270,7271
-  Database.Persist.Class.PersistEntity.fromPersistValues Database.Persist.Class.PersistEntity.fromPersistValues7273,7274
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames7288,7289
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues7290,7291
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys7292,7293
-  Database.Persist.Class.PersistEntity.persistFieldDefDatabase.Persist.Class.PersistEntity.persistFieldDef7295,7296
-  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField7325,7326
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens7327,7328
-action action7343,7344
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Action7353,7354
-  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey7354,7355
-  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey7356,7357
-data Record_RoleRecord_Role7358,7359
-  = Record_Role Record_Role7359,7360
-  = Record_Role {_role _role7359,7360
-type Record_RoleId Record_RoleId7361,7362
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Role7363,7364
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend7364,7365
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique7365,7366
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key7366,7367
-    = Record_RoleKey Record_RoleKey7367,7368
-    = Record_RoleKey {unRecord_RoleKey unRecord_RoleKey7367,7368
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField7379,7380
-    = typtyp7380,7381
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues7385,7386
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues7390,7391
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef7395,7396
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields7435,7436
-  Database.Persist.Class.PersistEntity.fromPersistValues Database.Persist.Class.PersistEntity.fromPersistValues7438,7439
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames7453,7454
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues7455,7456
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys7457,7458
-  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef7460,7461
-  Database.Persist.Class.PersistEntity.persistIdField Database.Persist.Class.PersistEntity.persistIdField7489,7490
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens7490,7491
-role role7505,7506
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Role7515,7516
-  Database.Persist.Class.PersistStore.toBackendKey Database.Persist.Class.PersistStore.toBackendKey7516,7517
-  Database.Persist.Class.PersistStore.fromBackendKey Database.Persist.Class.PersistStore.fromBackendKey7517,7518
-data Record_Action_RoleRecord_Action_Role7518,7519
-  = Record_Action_Role Record_Action_Role7519,7520
-  = Record_Action_Role {_action_id _action_id7519,7520
-                        _role_id _role_id7520,7521
-type Record_Action_RoleId Record_Action_RoleId7522,7523
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Action_Role7524,7525
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend7525,7526
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique7526,7527
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key7527,7528
-    = Record_Action_RoleKey Record_Action_RoleKey7528,7529
-    = Record_Action_RoleKey {unRecord_Action_RoleKey unRecord_Action_RoleKey7528,7529
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField7540,7541
-    = typtyp7541,7542
-      typtyp7549,7550
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues7553,7554
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues7558,7559
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef7563,7564
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields7626,7627
-  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues7630,7631
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames7652,7653
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues7654,7655
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys7656,7657
-  Database.Persist.Class.PersistEntity.persistFieldDefDatabase.Persist.Class.PersistEntity.persistFieldDef7659,7660
-  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField7711,7712
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens7713,7714
-action_id action_id7738,7739
-role_id role_id7749,7750
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Action_Role7760,7761
-  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey7761,7762
-  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey7763,7764
-data Record_NoteRecord_Note7765,7766
-  = Record_Note Record_Note7766,7767
-  = Record_Note {_note _note7766,7767
-                 _action_role_id _action_role_id7767,7768
-type Record_NoteId Record_NoteId7769,7770
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Note7771,7772
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend7772,7773
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique7773,7774
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key7774,7775
-    = Record_NoteKey Record_NoteKey7775,7776
-    = Record_NoteKey {unRecord_NoteKey unRecord_NoteKey7775,7776
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField7787,7788
-    = typtyp7788,7789
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues7797,7798
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues7802,7803
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef7807,7808
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields7864,7865
-  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues7868,7869
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames7890,7891
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues7892,7893
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys7894,7895
-  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef7897,7898
-  Database.Persist.Class.PersistEntity.persistIdField Database.Persist.Class.PersistEntity.persistIdField7943,7944
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens7944,7945
-note note7968,7969
-action_role_id action_role_id7978,7979
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Note7989,7990
-  Database.Persist.Class.PersistStore.toBackendKey Database.Persist.Class.PersistStore.toBackendKey7990,7991
-  Database.Persist.Class.PersistStore.fromBackendKey Database.Persist.Class.PersistStore.fromBackendKey7991,7992
-data Record_PokerRecord_Poker7992,7993
-  = Record_Poker Record_Poker7993,7994
-  = Record_Poker {_date _date7993,7994
-                  _amount _amount7994,7995
-                  _note_id _note_id7995,7996
-type Record_PokerId Record_PokerId7997,7998
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Poker7999,8000
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend8000,8001
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique8001,8002
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key8002,8003
-    = Record_PokerKey Record_PokerKey8003,8004
-    = Record_PokerKey {unRecord_PokerKey unRecord_PokerKey8003,8004
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField8015,8016
-    = typtyp8016,8017
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues8026,8027
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues8031,8032
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef8036,8037
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields8104,8105
-  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues8109,8110
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames8137,8138
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues8139,8140
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys8141,8142
-  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef8144,8145
-  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField8202,8203
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens8204,8205
-date date8237,8238
-amount amount8246,8247
-note_id note_id8255,8256
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Poker8266,8267
-  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey8267,8268
-  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey8269,8270
-migrateAll migrateAll8271,8272
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Action8806,8807
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue8807,8808
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue8815,8816
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Action8832,8833
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType8833,8834
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Role8835,8836
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue8836,8837
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue8844,8845
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Role8861,8862
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType8862,8863
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Action_Role8864,8865
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue8865,8866
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue8874,8875
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Action_Role8891,8892
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType8892,8893
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Note8894,8895
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue8895,8896
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue8904,8905
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Note8921,8922
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType8922,8923
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Poker8924,8925
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue8925,8926
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue8934,8935
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Poker8951,8952
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType8952,8953
-data Record_ActionRecord_Action8954,8955
-  = Record_Action Record_Action8955,8956
-  = Record_Action {_action _action8955,8956
-type Record_ActionId Record_ActionId8957,8958
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Action8959,8960
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend8960,8961
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique8961,8962
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key8962,8963
-    = Record_ActionKey Record_ActionKey8963,8964
-    = Record_ActionKey {unRecord_ActionKey unRecord_ActionKey8963,8964
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField8975,8976
-    = typtyp8976,8977
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues8981,8982
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues8986,8987
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef8991,8992
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields9031,9032
-  Database.Persist.Class.PersistEntity.fromPersistValues Database.Persist.Class.PersistEntity.fromPersistValues9034,9035
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames9049,9050
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues9051,9052
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys9053,9054
-  Database.Persist.Class.PersistEntity.persistFieldDefDatabase.Persist.Class.PersistEntity.persistFieldDef9056,9057
-  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField9086,9087
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens9088,9089
-action action9104,9105
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Action9114,9115
-  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey9115,9116
-  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey9117,9118
-data Record_RoleRecord_Role9119,9120
-  = Record_Role Record_Role9120,9121
-  = Record_Role {_role _role9120,9121
-type Record_RoleId Record_RoleId9122,9123
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Role9124,9125
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend9125,9126
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique9126,9127
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key9127,9128
-    = Record_RoleKey Record_RoleKey9128,9129
-    = Record_RoleKey {unRecord_RoleKey unRecord_RoleKey9128,9129
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField9140,9141
-    = typtyp9141,9142
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues9146,9147
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues9151,9152
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef9156,9157
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields9196,9197
-  Database.Persist.Class.PersistEntity.fromPersistValues Database.Persist.Class.PersistEntity.fromPersistValues9199,9200
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames9214,9215
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues9216,9217
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys9218,9219
-  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef9221,9222
-  Database.Persist.Class.PersistEntity.persistIdField Database.Persist.Class.PersistEntity.persistIdField9250,9251
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens9251,9252
-role role9266,9267
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Role9276,9277
-  Database.Persist.Class.PersistStore.toBackendKey Database.Persist.Class.PersistStore.toBackendKey9277,9278
-  Database.Persist.Class.PersistStore.fromBackendKey Database.Persist.Class.PersistStore.fromBackendKey9278,9279
-data Record_Action_RoleRecord_Action_Role9279,9280
-  = Record_Action_Role Record_Action_Role9280,9281
-  = Record_Action_Role {_action_id _action_id9280,9281
-                        _role_id _role_id9281,9282
-type Record_Action_RoleId Record_Action_RoleId9283,9284
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Action_Role9285,9286
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend9286,9287
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique9287,9288
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key9288,9289
-    = Record_Action_RoleKey Record_Action_RoleKey9289,9290
-    = Record_Action_RoleKey {unRecord_Action_RoleKey unRecord_Action_RoleKey9289,9290
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField9301,9302
-    = typtyp9302,9303
-      typtyp9310,9311
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues9314,9315
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues9319,9320
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef9324,9325
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields9387,9388
-  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues9391,9392
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames9413,9414
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues9415,9416
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys9417,9418
-  Database.Persist.Class.PersistEntity.persistFieldDefDatabase.Persist.Class.PersistEntity.persistFieldDef9420,9421
-  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField9472,9473
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens9474,9475
-action_id action_id9499,9500
-role_id role_id9510,9511
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Action_Role9521,9522
-  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey9522,9523
-  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey9524,9525
-data Record_NoteRecord_Note9526,9527
-  = Record_Note Record_Note9527,9528
-  = Record_Note {_note _note9527,9528
-                 _action_role_id _action_role_id9528,9529
-type Record_NoteId Record_NoteId9530,9531
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Note9532,9533
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend9533,9534
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique9534,9535
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key9535,9536
-    = Record_NoteKey Record_NoteKey9536,9537
-    = Record_NoteKey {unRecord_NoteKey unRecord_NoteKey9536,9537
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField9548,9549
-    = typtyp9549,9550
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues9558,9559
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues9563,9564
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef9568,9569
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields9625,9626
-  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues9629,9630
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames9651,9652
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues9653,9654
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys9655,9656
-  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef9658,9659
-  Database.Persist.Class.PersistEntity.persistIdField Database.Persist.Class.PersistEntity.persistIdField9704,9705
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens9705,9706
-note note9729,9730
-action_role_id action_role_id9739,9740
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Note9750,9751
-  Database.Persist.Class.PersistStore.toBackendKey Database.Persist.Class.PersistStore.toBackendKey9751,9752
-  Database.Persist.Class.PersistStore.fromBackendKey Database.Persist.Class.PersistStore.fromBackendKey9752,9753
-data Record_PokerRecord_Poker9753,9754
-  = Record_Poker Record_Poker9754,9755
-  = Record_Poker {_date _date9754,9755
-                  _amount _amount9755,9756
-                  _note_id _note_id9756,9757
-type Record_PokerId Record_PokerId9758,9759
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Poker9760,9761
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend9761,9762
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique9762,9763
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key9763,9764
-    = Record_PokerKey Record_PokerKey9764,9765
-    = Record_PokerKey {unRecord_PokerKey unRecord_PokerKey9764,9765
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField9776,9777
-    = typtyp9777,9778
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues9787,9788
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues9792,9793
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef9797,9798
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields9865,9866
-  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues9870,9871
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames9898,9899
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues9900,9901
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys9902,9903
-  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef9905,9906
-  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField9963,9964
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens9965,9966
-date date9998,9999
-amount amount10007,10008
-note_id note_id10016,10017
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Poker10027,10028
-  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey10028,10029
-  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey10030,10031
-migrateAll migrateAll10032,10033
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Action10567,10568
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue10568,10569
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue10576,10577
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Action10593,10594
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType10594,10595
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Role10596,10597
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue10597,10598
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue10605,10606
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Role10622,10623
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType10623,10624
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Action_Role10625,10626
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue10626,10627
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue10635,10636
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Action_Role10652,10653
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType10653,10654
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Note10655,10656
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue10656,10657
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue10665,10666
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Note10682,10683
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType10683,10684
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Poker10685,10686
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue10686,10687
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue10695,10696
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Poker10712,10713
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType10713,10714
-data Record_ActionRecord_Action10715,10716
-  = Record_Action Record_Action10716,10717
-  = Record_Action {_action _action10716,10717
-type Record_ActionId Record_ActionId10718,10719
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Action10720,10721
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend10721,10722
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique10722,10723
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key10723,10724
-    = Record_ActionKey Record_ActionKey10724,10725
-    = Record_ActionKey {unRecord_ActionKey unRecord_ActionKey10724,10725
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField10736,10737
-    = typtyp10737,10738
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues10742,10743
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues10747,10748
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef10752,10753
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields10792,10793
-  Database.Persist.Class.PersistEntity.fromPersistValues Database.Persist.Class.PersistEntity.fromPersistValues10795,10796
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames10810,10811
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues10812,10813
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys10814,10815
-  Database.Persist.Class.PersistEntity.persistFieldDefDatabase.Persist.Class.PersistEntity.persistFieldDef10817,10818
-  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField10847,10848
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens10849,10850
-action action10865,10866
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Action10875,10876
-  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey10876,10877
-  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey10878,10879
-data Record_RoleRecord_Role10880,10881
-  = Record_Role Record_Role10881,10882
-  = Record_Role {_role _role10881,10882
-type Record_RoleId Record_RoleId10883,10884
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Role10885,10886
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend10886,10887
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique10887,10888
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key10888,10889
-    = Record_RoleKey Record_RoleKey10889,10890
-    = Record_RoleKey {unRecord_RoleKey unRecord_RoleKey10889,10890
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField10901,10902
-    = typtyp10902,10903
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues10907,10908
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues10912,10913
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef10917,10918
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields10957,10958
-  Database.Persist.Class.PersistEntity.fromPersistValues Database.Persist.Class.PersistEntity.fromPersistValues10960,10961
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames10975,10976
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues10977,10978
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys10979,10980
-  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef10982,10983
-  Database.Persist.Class.PersistEntity.persistIdField Database.Persist.Class.PersistEntity.persistIdField11011,11012
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens11012,11013
-role role11027,11028
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Role11037,11038
-  Database.Persist.Class.PersistStore.toBackendKey Database.Persist.Class.PersistStore.toBackendKey11038,11039
-  Database.Persist.Class.PersistStore.fromBackendKey Database.Persist.Class.PersistStore.fromBackendKey11039,11040
-data Record_Action_RoleRecord_Action_Role11040,11041
-  = Record_Action_Role Record_Action_Role11041,11042
-  = Record_Action_Role {_action_id _action_id11041,11042
-                        _role_id _role_id11042,11043
-type Record_Action_RoleId Record_Action_RoleId11044,11045
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Action_Role11046,11047
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend11047,11048
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique11048,11049
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key11049,11050
-    = Record_Action_RoleKey Record_Action_RoleKey11050,11051
-    = Record_Action_RoleKey {unRecord_Action_RoleKey unRecord_Action_RoleKey11050,11051
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField11062,11063
-    = typtyp11063,11064
-      typtyp11071,11072
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues11075,11076
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues11080,11081
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef11085,11086
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields11148,11149
-  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues11152,11153
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames11174,11175
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues11176,11177
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys11178,11179
-  Database.Persist.Class.PersistEntity.persistFieldDefDatabase.Persist.Class.PersistEntity.persistFieldDef11181,11182
-  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField11233,11234
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens11235,11236
-action_id action_id11260,11261
-role_id role_id11271,11272
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Action_Role11282,11283
-  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey11283,11284
-  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey11285,11286
-data Record_NoteRecord_Note11287,11288
-  = Record_Note Record_Note11288,11289
-  = Record_Note {_note _note11288,11289
-                 _action_role_id _action_role_id11289,11290
-type Record_NoteId Record_NoteId11291,11292
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Note11293,11294
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend11294,11295
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique11295,11296
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key11296,11297
-    = Record_NoteKey Record_NoteKey11297,11298
-    = Record_NoteKey {unRecord_NoteKey unRecord_NoteKey11297,11298
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField11309,11310
-    = typtyp11310,11311
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues11319,11320
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues11324,11325
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef11329,11330
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields11386,11387
-  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues11390,11391
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames11412,11413
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues11414,11415
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys11416,11417
-  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef11419,11420
-  Database.Persist.Class.PersistEntity.persistIdField Database.Persist.Class.PersistEntity.persistIdField11465,11466
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens11466,11467
-note note11490,11491
-action_role_id action_role_id11500,11501
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Note11511,11512
-  Database.Persist.Class.PersistStore.toBackendKey Database.Persist.Class.PersistStore.toBackendKey11512,11513
-  Database.Persist.Class.PersistStore.fromBackendKey Database.Persist.Class.PersistStore.fromBackendKey11513,11514
-data Record_PokerRecord_Poker11514,11515
-  = Record_Poker Record_Poker11515,11516
-  = Record_Poker {_date _date11515,11516
-                  _amount _amount11516,11517
-                  _note_id _note_id11517,11518
-type Record_PokerId Record_PokerId11519,11520
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Poker11521,11522
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend11522,11523
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique11523,11524
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key11524,11525
-    = Record_PokerKey Record_PokerKey11525,11526
-    = Record_PokerKey {unRecord_PokerKey unRecord_PokerKey11525,11526
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField11537,11538
-    = typtyp11538,11539
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues11548,11549
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues11553,11554
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef11558,11559
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields11626,11627
-  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues11631,11632
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames11659,11660
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues11661,11662
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys11663,11664
-  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef11666,11667
-  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField11724,11725
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens11726,11727
-date date11759,11760
-amount amount11768,11769
-note_id note_id11777,11778
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Poker11788,11789
-  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey11789,11790
-  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey11791,11792
-migrateAll migrateAll11793,11794
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Action12328,12329
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue12329,12330
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue12337,12338
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Action12354,12355
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType12355,12356
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Role12357,12358
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue12358,12359
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue12366,12367
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Role12383,12384
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType12384,12385
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Action_Role12386,12387
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue12387,12388
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue12396,12397
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Action_Role12413,12414
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType12414,12415
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Note12416,12417
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue12417,12418
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue12426,12427
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Note12443,12444
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType12444,12445
-instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Poker12446,12447
-  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue12447,12448
-  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue12456,12457
-instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Poker12473,12474
-  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType12474,12475
-data Record_ActionRecord_Action12476,12477
-  = Record_Action Record_Action12477,12478
-  = Record_Action {_action _action12477,12478
-type Record_ActionId Record_ActionId12479,12480
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Action12481,12482
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend12482,12483
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique12483,12484
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key12484,12485
-    = Record_ActionKey Record_ActionKey12485,12486
-    = Record_ActionKey {unRecord_ActionKey unRecord_ActionKey12485,12486
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField12497,12498
-    = typtyp12498,12499
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues12503,12504
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues12508,12509
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef12513,12514
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields12553,12554
-  Database.Persist.Class.PersistEntity.fromPersistValues Database.Persist.Class.PersistEntity.fromPersistValues12556,12557
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames12571,12572
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues12573,12574
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys12575,12576
-  Database.Persist.Class.PersistEntity.persistFieldDefDatabase.Persist.Class.PersistEntity.persistFieldDef12578,12579
-  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField12608,12609
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens12610,12611
-action action12626,12627
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Action12636,12637
-  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey12637,12638
-  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey12639,12640
-data Record_RoleRecord_Role12641,12642
-  = Record_Role Record_Role12642,12643
-  = Record_Role {_role _role12642,12643
-type Record_RoleId Record_RoleId12644,12645
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Role12646,12647
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend12647,12648
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique12648,12649
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key12649,12650
-    = Record_RoleKey Record_RoleKey12650,12651
-    = Record_RoleKey {unRecord_RoleKey unRecord_RoleKey12650,12651
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField12662,12663
-    = typtyp12663,12664
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues12668,12669
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues12673,12674
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef12678,12679
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields12718,12719
-  Database.Persist.Class.PersistEntity.fromPersistValues Database.Persist.Class.PersistEntity.fromPersistValues12721,12722
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames12736,12737
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues12738,12739
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys12740,12741
-  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef12743,12744
-  Database.Persist.Class.PersistEntity.persistIdField Database.Persist.Class.PersistEntity.persistIdField12772,12773
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens12773,12774
-role role12788,12789
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Role12798,12799
-  Database.Persist.Class.PersistStore.toBackendKey Database.Persist.Class.PersistStore.toBackendKey12799,12800
-  Database.Persist.Class.PersistStore.fromBackendKey Database.Persist.Class.PersistStore.fromBackendKey12800,12801
-data Record_Action_RoleRecord_Action_Role12801,12802
-  = Record_Action_Role Record_Action_Role12802,12803
-  = Record_Action_Role {_action_id _action_id12802,12803
-                        _role_id _role_id12803,12804
-type Record_Action_RoleId Record_Action_RoleId12805,12806
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Action_Role12807,12808
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend12808,12809
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique12809,12810
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key12810,12811
-    = Record_Action_RoleKey Record_Action_RoleKey12811,12812
-    = Record_Action_RoleKey {unRecord_Action_RoleKey unRecord_Action_RoleKey12811,12812
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField12823,12824
-    = typtyp12824,12825
-      typtyp12832,12833
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues12836,12837
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues12841,12842
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef12846,12847
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields12909,12910
-  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues12913,12914
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames12935,12936
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues12937,12938
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys12939,12940
-  Database.Persist.Class.PersistEntity.persistFieldDefDatabase.Persist.Class.PersistEntity.persistFieldDef12942,12943
-  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField12994,12995
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens12996,12997
-action_id action_id13021,13022
-role_id role_id13032,13033
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Action_Role13043,13044
-  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey13044,13045
-  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey13046,13047
-data Record_NoteRecord_Note13048,13049
-  = Record_Note Record_Note13049,13050
-  = Record_Note {_note _note13049,13050
-                 _action_role_id _action_role_id13050,13051
-type Record_NoteId Record_NoteId13052,13053
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Note13054,13055
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend13055,13056
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique13056,13057
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key13057,13058
-    = Record_NoteKey Record_NoteKey13058,13059
-    = Record_NoteKey {unRecord_NoteKey unRecord_NoteKey13058,13059
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField13070,13071
-    = typtyp13071,13072
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues13080,13081
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues13085,13086
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef13090,13091
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields13147,13148
-  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues13151,13152
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames13173,13174
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues13175,13176
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys13177,13178
-  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef13180,13181
-  Database.Persist.Class.PersistEntity.persistIdField Database.Persist.Class.PersistEntity.persistIdField13226,13227
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens13227,13228
-note note13251,13252
-action_role_id action_role_id13261,13262
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Note13272,13273
-  Database.Persist.Class.PersistStore.toBackendKey Database.Persist.Class.PersistStore.toBackendKey13273,13274
-  Database.Persist.Class.PersistStore.fromBackendKey Database.Persist.Class.PersistStore.fromBackendKey13274,13275
-data Record_PokerRecord_Poker13275,13276
-  = Record_Poker Record_Poker13276,13277
-  = Record_Poker {_date _date13276,13277
-                  _amount _amount13277,13278
-                  _note_id _note_id13278,13279
-type Record_PokerId Record_PokerId13280,13281
-instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Poker13282,13283
-  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend13283,13284
-  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique13284,13285
-  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key13285,13286
-    = Record_PokerKey Record_PokerKey13286,13287
-    = Record_PokerKey {unRecord_PokerKey unRecord_PokerKey13286,13287
-  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField13298,13299
-    = typtyp13299,13300
-  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues13309,13310
-  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues13314,13315
-  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef13319,13320
-  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields13387,13388
-  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues13392,13393
-  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames13420,13421
-  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues13422,13423
-  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys13424,13425
-  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef13427,13428
-  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField13485,13486
-  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens13487,13488
-date date13520,13521
-amount amount13529,13530
-note_id note_id13538,13539
-instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Poker13549,13550
-  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey13550,13551
-  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey13552,13553
-migrateAll migrateAll13554,13555
+instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Action26,27
+  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType27,28
+instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Role29,30
+  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue30,31
+  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue38,39
+instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Role54,55
+  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType55,56
+instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Action_Role57,58
+  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue58,59
+  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue67,68
+instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Action_Role83,84
+  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType84,85
+instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Note86,87
+  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue87,88
+  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue96,97
+instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Note112,113
+  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType113,114
+instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Poker115,116
+  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue116,117
+  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue125,126
+instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Poker141,142
+  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType142,143
+data Record_ActionRecord_Action144,145
+  = Record_Action Record_Action145,146
+  = Record_Action {_action _action145,146
+type Record_ActionId Record_ActionId147,148
+instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Action149,150
+  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend150,151
+  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique151,152
+  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key152,153
+    = Record_ActionKey Record_ActionKey153,154
+    = Record_ActionKey {unRecord_ActionKey unRecord_ActionKey153,154
+  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField165,166
+    = typtyp166,167
+  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues171,172
+  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues176,177
+  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef181,182
+  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields221,222
+  Database.Persist.Class.PersistEntity.fromPersistValues Database.Persist.Class.PersistEntity.fromPersistValues224,225
+  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames239,240
+  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues241,242
+  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys243,244
+  Database.Persist.Class.PersistEntity.persistFieldDefDatabase.Persist.Class.PersistEntity.persistFieldDef246,247
+  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField276,277
+  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens278,279
+action action294,295
+instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Action304,305
+  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey305,306
+  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey307,308
+data Record_RoleRecord_Role309,310
+  = Record_Role Record_Role310,311
+  = Record_Role {_role _role310,311
+type Record_RoleId Record_RoleId312,313
+instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Role314,315
+  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend315,316
+  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique316,317
+  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key317,318
+    = Record_RoleKey Record_RoleKey318,319
+    = Record_RoleKey {unRecord_RoleKey unRecord_RoleKey318,319
+  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField330,331
+    = typtyp331,332
+  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues336,337
+  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues341,342
+  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef346,347
+  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields386,387
+  Database.Persist.Class.PersistEntity.fromPersistValues Database.Persist.Class.PersistEntity.fromPersistValues389,390
+  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames404,405
+  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues406,407
+  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys408,409
+  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef411,412
+  Database.Persist.Class.PersistEntity.persistIdField Database.Persist.Class.PersistEntity.persistIdField440,441
+  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens441,442
+role role456,457
+instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Role466,467
+  Database.Persist.Class.PersistStore.toBackendKey Database.Persist.Class.PersistStore.toBackendKey467,468
+  Database.Persist.Class.PersistStore.fromBackendKey Database.Persist.Class.PersistStore.fromBackendKey468,469
+data Record_Action_RoleRecord_Action_Role469,470
+  = Record_Action_Role Record_Action_Role470,471
+  = Record_Action_Role {_action_id _action_id470,471
+                        _role_id _role_id471,472
+type Record_Action_RoleId Record_Action_RoleId473,474
+instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Action_Role475,476
+  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend476,477
+  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique477,478
+  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key478,479
+    = Record_Action_RoleKey Record_Action_RoleKey479,480
+    = Record_Action_RoleKey {unRecord_Action_RoleKey unRecord_Action_RoleKey479,480
+  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField491,492
+    = typtyp492,493
+      typtyp500,501
+  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues504,505
+  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues509,510
+  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef514,515
+  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields577,578
+  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues581,582
+  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames603,604
+  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues605,606
+  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys607,608
+  Database.Persist.Class.PersistEntity.persistFieldDefDatabase.Persist.Class.PersistEntity.persistFieldDef610,611
+  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField662,663
+  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens664,665
+action_id action_id689,690
+role_id role_id700,701
+instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Action_Role711,712
+  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey712,713
+  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey714,715
+data Record_NoteRecord_Note716,717
+  = Record_Note Record_Note717,718
+  = Record_Note {_note _note717,718
+                 _action_role_id _action_role_id718,719
+type Record_NoteId Record_NoteId720,721
+instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Note722,723
+  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend723,724
+  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique724,725
+  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key725,726
+    = Record_NoteKey Record_NoteKey726,727
+    = Record_NoteKey {unRecord_NoteKey unRecord_NoteKey726,727
+  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField738,739
+    = typtyp739,740
+  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues748,749
+  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues753,754
+  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef758,759
+  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields815,816
+  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues819,820
+  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames841,842
+  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues843,844
+  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys845,846
+  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef848,849
+  Database.Persist.Class.PersistEntity.persistIdField Database.Persist.Class.PersistEntity.persistIdField894,895
+  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens895,896
+note note919,920
+action_role_id action_role_id929,930
+instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Note940,941
+  Database.Persist.Class.PersistStore.toBackendKey Database.Persist.Class.PersistStore.toBackendKey941,942
+  Database.Persist.Class.PersistStore.fromBackendKey Database.Persist.Class.PersistStore.fromBackendKey942,943
+data Record_PokerRecord_Poker943,944
+  = Record_Poker Record_Poker944,945
+  = Record_Poker {_date _date944,945
+                  _amount _amount945,946
+                  _note_id _note_id946,947
+type Record_PokerId Record_PokerId948,949
+instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Poker950,951
+  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend951,952
+  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique952,953
+  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key953,954
+    = Record_PokerKey Record_PokerKey954,955
+    = Record_PokerKey {unRecord_PokerKey unRecord_PokerKey954,955
+  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField966,967
+    = typtyp967,968
+  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues977,978
+  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues982,983
+  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef987,988
+  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields1055,1056
+  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues1060,1061
+  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames1088,1089
+  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues1090,1091
+  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys1092,1093
+  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef1095,1096
+  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField1153,1154
+  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens1155,1156
+date date1188,1189
+amount amount1197,1198
+note_id note_id1206,1207
+instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Poker1217,1218
+  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey1218,1219
+  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey1220,1221
+migrateAll migrateAll1222,1223
+instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Action1757,1758
+  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue1758,1759
+  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue1766,1767
+instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Action1783,1784
+  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType1784,1785
+instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Role1786,1787
+  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue1787,1788
+  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue1795,1796
+instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Role1812,1813
+  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType1813,1814
+instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Action_Role1815,1816
+  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue1816,1817
+  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue1825,1826
+instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Action_Role1842,1843
+  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType1843,1844
+instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Note1845,1846
+  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue1846,1847
+  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue1855,1856
+instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Note1872,1873
+  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType1873,1874
+instance Database.Persist.Class.PersistField.PersistField Database-Persist-Class-PersistField-PersistField Record_Poker1875,1876
+  Database.Persist.Class.PersistField.toPersistValueDatabase.Persist.Class.PersistField.toPersistValue1876,1877
+  Database.Persist.Class.PersistField.fromPersistValueDatabase.Persist.Class.PersistField.fromPersistValue1885,1886
+instance Database.Persist.Sql.Class.PersistFieldSql Database-Persist-Sql-Class-PersistFieldSql Record_Poker1902,1903
+  Database.Persist.Sql.Class.sqlType Database.Persist.Sql.Class.sqlType1903,1904
+data Record_ActionRecord_Action1905,1906
+  = Record_Action Record_Action1906,1907
+  = Record_Action {_action _action1906,1907
+type Record_ActionId Record_ActionId1908,1909
+instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Action1910,1911
+  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend1911,1912
+  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique1912,1913
+  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key1913,1914
+    = Record_ActionKey Record_ActionKey1914,1915
+    = Record_ActionKey {unRecord_ActionKey unRecord_ActionKey1914,1915
+  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField1926,1927
+    = typtyp1927,1928
+  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues1932,1933
+  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues1937,1938
+  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef1942,1943
+  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields1982,1983
+  Database.Persist.Class.PersistEntity.fromPersistValues Database.Persist.Class.PersistEntity.fromPersistValues1985,1986
+  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames2000,2001
+  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues2002,2003
+  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys2004,2005
+  Database.Persist.Class.PersistEntity.persistFieldDefDatabase.Persist.Class.PersistEntity.persistFieldDef2007,2008
+  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField2037,2038
+  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens2039,2040
+action action2055,2056
+instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Action2065,2066
+  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey2066,2067
+  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey2068,2069
+data Record_RoleRecord_Role2070,2071
+  = Record_Role Record_Role2071,2072
+  = Record_Role {_role _role2071,2072
+type Record_RoleId Record_RoleId2073,2074
+instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Role2075,2076
+  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend2076,2077
+  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique2077,2078
+  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key2078,2079
+    = Record_RoleKey Record_RoleKey2079,2080
+    = Record_RoleKey {unRecord_RoleKey unRecord_RoleKey2079,2080
+  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField2091,2092
+    = typtyp2092,2093
+  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues2097,2098
+  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues2102,2103
+  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef2107,2108
+  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields2147,2148
+  Database.Persist.Class.PersistEntity.fromPersistValues Database.Persist.Class.PersistEntity.fromPersistValues2150,2151
+  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames2165,2166
+  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues2167,2168
+  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys2169,2170
+  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef2172,2173
+  Database.Persist.Class.PersistEntity.persistIdField Database.Persist.Class.PersistEntity.persistIdField2201,2202
+  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens2202,2203
+role role2217,2218
+instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Role2227,2228
+  Database.Persist.Class.PersistStore.toBackendKey Database.Persist.Class.PersistStore.toBackendKey2228,2229
+  Database.Persist.Class.PersistStore.fromBackendKey Database.Persist.Class.PersistStore.fromBackendKey2229,2230
+data Record_Action_RoleRecord_Action_Role2230,2231
+  = Record_Action_Role Record_Action_Role2231,2232
+  = Record_Action_Role {_action_id _action_id2231,2232
+                        _role_id _role_id2232,2233
+type Record_Action_RoleId Record_Action_RoleId2234,2235
+instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Action_Role2236,2237
+  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend2237,2238
+  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique2238,2239
+  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key2239,2240
+    = Record_Action_RoleKey Record_Action_RoleKey2240,2241
+    = Record_Action_RoleKey {unRecord_Action_RoleKey unRecord_Action_RoleKey2240,2241
+  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField2252,2253
+    = typtyp2253,2254
+      typtyp2261,2262
+  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues2265,2266
+  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues2270,2271
+  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef2275,2276
+  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields2338,2339
+  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues2342,2343
+  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames2364,2365
+  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues2366,2367
+  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys2368,2369
+  Database.Persist.Class.PersistEntity.persistFieldDefDatabase.Persist.Class.PersistEntity.persistFieldDef2371,2372
+  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField2423,2424
+  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens2425,2426
+action_id action_id2450,2451
+role_id role_id2461,2462
+instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Action_Role2472,2473
+  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey2473,2474
+  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey2475,2476
+data Record_NoteRecord_Note2477,2478
+  = Record_Note Record_Note2478,2479
+  = Record_Note {_note _note2478,2479
+                 _action_role_id _action_role_id2479,2480
+type Record_NoteId Record_NoteId2481,2482
+instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Note2483,2484
+  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend2484,2485
+  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique2485,2486
+  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key2486,2487
+    = Record_NoteKey Record_NoteKey2487,2488
+    = Record_NoteKey {unRecord_NoteKey unRecord_NoteKey2487,2488
+  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField2499,2500
+    = typtyp2500,2501
+  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues2509,2510
+  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues2514,2515
+  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef2519,2520
+  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields2576,2577
+  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues2580,2581
+  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames2602,2603
+  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues2604,2605
+  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys2606,2607
+  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef2609,2610
+  Database.Persist.Class.PersistEntity.persistIdField Database.Persist.Class.PersistEntity.persistIdField2655,2656
+  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens2656,2657
+note note2680,2681
+action_role_id action_role_id2690,2691
+instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Note2701,2702
+  Database.Persist.Class.PersistStore.toBackendKey Database.Persist.Class.PersistStore.toBackendKey2702,2703
+  Database.Persist.Class.PersistStore.fromBackendKey Database.Persist.Class.PersistStore.fromBackendKey2703,2704
+data Record_PokerRecord_Poker2704,2705
+  = Record_Poker Record_Poker2705,2706
+  = Record_Poker {_date _date2705,2706
+                  _amount _amount2706,2707
+                  _note_id _note_id2707,2708
+type Record_PokerId Record_PokerId2709,2710
+instance Database.Persist.Class.PersistEntity.PersistEntity Database-Persist-Class-PersistEntity-PersistEntity Record_Poker2711,2712
+  type Database.Persist.Class.PersistEntity.PersistEntityBackend Database.Persist.Class.PersistEntity.PersistEntityBackend2712,2713
+  data Database.Persist.Class.PersistEntity.Unique Database.Persist.Class.PersistEntity.Unique2713,2714
+  newtype Database.Persist.Class.PersistEntity.Key Database.Persist.Class.PersistEntity.Key2714,2715
+    = Record_PokerKey Record_PokerKey2715,2716
+    = Record_PokerKey {unRecord_PokerKey unRecord_PokerKey2715,2716
+  data Database.Persist.Class.PersistEntity.EntityField Database.Persist.Class.PersistEntity.EntityField2727,2728
+    = typtyp2728,2729
+  Database.Persist.Class.PersistEntity.keyToValuesDatabase.Persist.Class.PersistEntity.keyToValues2738,2739
+  Database.Persist.Class.PersistEntity.keyFromValuesDatabase.Persist.Class.PersistEntity.keyFromValues2743,2744
+  Database.Persist.Class.PersistEntity.entityDef Database.Persist.Class.PersistEntity.entityDef2748,2749
+  Database.Persist.Class.PersistEntity.toPersistFieldsDatabase.Persist.Class.PersistEntity.toPersistFields2816,2817
+  Database.Persist.Class.PersistEntity.fromPersistValuesDatabase.Persist.Class.PersistEntity.fromPersistValues2821,2822
+  Database.Persist.Class.PersistEntity.persistUniqueToFieldNames Database.Persist.Class.PersistEntity.persistUniqueToFieldNames2849,2850
+  Database.Persist.Class.PersistEntity.persistUniqueToValues Database.Persist.Class.PersistEntity.persistUniqueToValues2851,2852
+  Database.Persist.Class.PersistEntity.persistUniqueKeysDatabase.Persist.Class.PersistEntity.persistUniqueKeys2853,2854
+  Database.Persist.Class.PersistEntity.persistFieldDef Database.Persist.Class.PersistEntity.persistFieldDef2856,2857
+  Database.Persist.Class.PersistEntity.persistIdFieldDatabase.Persist.Class.PersistEntity.persistIdField2914,2915
+  Database.Persist.Class.PersistEntity.fieldLens Database.Persist.Class.PersistEntity.fieldLens2916,2917
+date date2949,2950
+amount amount2958,2959
+note_id note_id2967,2968
+instance Database.Persist.Class.PersistStore.ToBackendKey Database-Persist-Class-PersistStore-ToBackendKey Database-Persist-Sql-Types-Internal-SqlBackend Record_Poker2978,2979
+  Database.Persist.Class.PersistStore.toBackendKeyDatabase.Persist.Class.PersistStore.toBackendKey2979,2980
+  Database.Persist.Class.PersistStore.fromBackendKeyDatabase.Persist.Class.PersistStore.fromBackendKey2981,2982
+migrateAll migrateAll2983,2984
 
 ./src/Data/Dates/Formats.hs,746
 module Data.Dates.FormatsData.Dates.Formats27,28
