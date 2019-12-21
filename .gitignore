@@ -8,3 +8,4 @@ tarballs/
 unpacked
 auth
 *.th.hs
+stack.yaml.lock
